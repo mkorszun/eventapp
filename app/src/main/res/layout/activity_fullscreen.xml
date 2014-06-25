@@ -1,0 +1,102 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="com.eventapp.FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:textColor="#33b5e5"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:gravity="center"
+        android:text="Add Event"
+            />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:gravity="top">
+
+                <EditText
+                        android:id="@+id/headline"
+                        android:layout_height="wrap_content"
+                        android:hint="Headline"
+                        android:inputType="text"
+                        android:layout_width="fill_parent">
+                </EditText>
+
+                <EditText
+                        android:id="@+id/cost"
+                        android:layout_height="wrap_content"
+                        android:hint="Cost"
+                        android:inputType="number"
+                        android:layout_width="fill_parent">
+                </EditText>
+
+                <EditText
+                        android:id="@+id/duration"
+                        android:layout_height="wrap_content"
+                        android:hint="Duration"
+                        android:inputType="number"
+                        android:layout_width="fill_parent">
+                </EditText>
+
+                <EditText
+                        android:id="@+id/description"
+                        android:layout_height="wrap_content"
+                        android:hint="Description"
+                        android:inputType="text"
+                        android:layout_width="fill_parent">
+                </EditText>
+
+                <EditText
+                        android:id="@+id/locationX"
+                        android:layout_height="wrap_content"
+                        android:hint="LocationX"
+                        android:inputType="number"
+                        android:layout_width="fill_parent">
+                </EditText>
+
+                <EditText
+                        android:id="@+id/locationY"
+                        android:layout_height="wrap_content"
+                        android:hint="LocationY"
+                        android:inputType="number"
+                        android:layout_width="fill_parent">
+                </EditText>
+
+                <Button android:id="@+id/dummy_button"
+                        style="?metaButtonBarButtonStyle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="1"
+                        android:text="Save event" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
