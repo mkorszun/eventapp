@@ -9,6 +9,8 @@ import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import com.eventapp.backend.BackendInterface;
+import com.eventapp.backend.BackendInterfaceFactory;
 import com.eventapp.model.Event;
 import com.eventapp.util.SystemUiHider;
 import retrofit.RetrofitError;

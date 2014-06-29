@@ -1,4 +1,4 @@
-package com.eventapp;
+package com.eventapp.backend;
 
 import com.eventapp.model.Event;
 import retrofit.http.Body;
